@@ -14,24 +14,34 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
+# Inherit from those products. Most specific first !
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PalladiumOS stuff !
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
-# Inherit from whyred device
+# Inherit from whyred device !
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit from custom vendor.
+# Inherit from custom vendor !
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+# PalladiumOS Properties !
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+PALLADIUM_BUILDTYPE := OFFICIAL
+
+# Device Specfic !
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_whyred
+PRODUCT_NAME := palladium_whyred
 PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -39,6 +49,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR_PRODUCT_NAME := whyred
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 11 RQ2A.210505.003 7255357 release-keys"
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.210605.005 7349499 release-keys"
 
-BUILD_FINGERPRINT := google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys

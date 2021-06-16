@@ -1,0 +1,7 @@
+# PalladiumOS Manintainer Props
+ro.palladiumdevice.maintainer=P.M.SALMAN_KHAN
+ro.palladiumdevice.cpu=SDM636
+ro.palladiumdevice.display=5.99
+ro.palladiumdevice.displaytype=FULLHD+
+ro.palladiumdevice.battery=4000mAh
+ro.palladiumdevice.camera=12MP+5MP
